@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>CSS</title>
+	
+	<link rel="stylesheet" type="text/css" href="basictest.css">
+	
+	<script>
+	function doMath()
+	{
+		var x = 7;
+		var y = 48;
+		var z = 5;
+		var answer = x * y / z;
+		
+		document.getElementById("output").innerHTML = "The result is " + answer;
+		
+	}
+	</script>
+	
+	<style>
+		div {height:50px;width:100%}
+	</style>
+
+</head>
+
+<body>
+
+<p>CSS Test</p>
+
+<div style="background-color:rgb(254,148,43);"></div>
+
+<button onclick="doMath();">Do the Magic</button>
+
+<p id="output" style="color:red;font-size:220%;"></p>
+<p class="regular">This is regular paragraph</p>
+<p class="medium">This is medium paragraph</p>
+<p class="testClass">This is a test of test Class</p>
+
+</body>
+
+</html>

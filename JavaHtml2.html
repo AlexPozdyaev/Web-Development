@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Dynamic page</title>
+	
+	<script type="text/javascript">
+	
+	function displayInput() //Java comment
+	{
+		var testInput = document.getElementById("name").value
+		
+		if (testInput.lenght != 0)
+		{
+		    document.getElementById("para").innerHTML = testInput; 
+		}
+		else
+			document.getElementById("para").innerHTML = "Hey, you must type something!";
+	}
+	
+	</script>
+
+</head>
+
+<body>
+
+<H1 style="color:red;">THERE IS NO ANOTHER BUTTON!!!</H1>
+
+<input id="name" type="text"/>
+
+<button onclick="displayInput();">Do not color it!</button>
+
+<p id="para" style="color:blue;"></p>
+
+</body>
+
+</html>

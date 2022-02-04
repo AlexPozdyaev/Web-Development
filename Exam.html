@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>HTML Forms</title>
+
+	<link rel="stylesheet" type="text/css" href="basic.css">
+	
+	<script>
+	
+	/* It's just a comment. Nothing interesting here */
+	
+	function checkField1()
+	{
+		var field = document.getElementById("field1").value;
+	
+		if(field != "")
+			document.getElementById("message1").innerHTML = "Hey, you have a pretty name :)";
+		else
+			document.getElementById("message1").innerHTML = "You have to write something!";
+	}
+	
+	function checkField2()
+	{
+		var field = document.getElementById("field2").value;
+	
+		if(field != "")
+			document.getElementById("message2").innerHTML = "Input accepted";
+		else
+			document.getElementById("message2").innerHTML = "You have to write yor number!";
+	}
+	</script>
+
+</head>
+
+<body>
+<H1>"Shadow" Food Delivery</H1>
+	
+<form>
+
+<!-- Should I write something here? --->
+
+	First Name:<br>
+	<input id="field1" type="text" name="firstname" onblur="checkField1();"/>  <span id="message1"></span><br>
+	Last Name:<br>
+	<input type="text" name="lastname" value="Smith"/><br>
+	Phone Number:<br>
+	<input id = "field2" type="text" name="phonenumber" onblur="checkField2();"/><br>
+	User passwoord:<br>
+	<input type="password" name="password"/><br><br>
+	
+	<p style="font-size:150%; color:blue;">What do You want to order?</p>
+	<input type="radio" name="food" value="Pizza" checked>Pizza<br>
+	<input type="radio" name="food" value="Tacos">Tacos<br>
+	<input type="radio" name="food" value="Rolls">Rolls<br>
+	<input type="radio" name="food" value="Burger">Burger<br>
+	<input type="radio" name="food" value="Salad">Salad<br><br>
+	
+	<input type="radio" name="pay" value="By Card">Pay By Card<br>
+	<input type="radio" name="pay" value="By Cash">Pay By Cash<br><br>
+	
+	How many would You like to order?
+	<input type="number" name="quantity" min="1" max="10"><br>
+	
+</form>
+
+</body>
+
+</html>
